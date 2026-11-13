@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Aurevia Multispecialty Hospital</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                Aurevia
+            </a>
+            
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="specialties.html">Specialties</a>
+                <a href="doctors.html">Doctors</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="patient-resources.html">Patients</a>
+                <a href="contact.html">Contact</a>
+                <a href="appointments.html" class="btn btn-primary active">Book Appointment</a>
+            </nav>
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="bg-navy" style="padding: var(--space-10) 0; position: relative; overflow: hidden;">
+        <div class="container text-center" style="position: relative; z-index: 1;">
+            <h1>Book an Appointment</h1>
+            <p style="margin: 0 auto; color: rgba(255,255,255,0.8);">Schedule a consultation with our experts. Secure your preferred date and time.</p>
+        </div>
+    </div>
+
+    <section class="section-padding bg-ivory">
+        <div class="container" style="max-width: 800px;">
+            <div class="card" style="padding: var(--space-8); border: none; box-shadow: var(--shadow-lg);" id="booking-process">
+                <form id="appointment-form">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                        <div class="form-group">
+                            <label class="form-label" for="specialty">Specialty</label>
+                            <select id="specialty" class="form-control">
+                                <option value="">Select Specialty</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="doctor">Doctor</label>
+                            <select id="doctor" class="form-control">
+                                <option value="">Select Doctor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="location">Location</label>
+                            <select id="location" class="form-control" required>
+                                <option value="">Select Location</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="date">Preferred Date</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: var(--space-8); margin-bottom: var(--space-4); border-bottom: 1px solid var(--clr-border); padding-bottom: var(--space-2);">Patient Details</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                        <div class="form-group">
+                            <label class="form-label" for="fname">First Name</label>
+                            <input type="text" id="fname" class="form-control" placeholder="Jane" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="lname">Last Name</label>
+                            <input type="text" id="lname" class="form-control" placeholder="Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: var(--space-6); padding: var(--space-4); background-color: var(--clr-mint); border-radius: var(--radius-md); font-size: 0.875rem; color: var(--clr-teal-hover); border: 1px solid rgba(19, 140, 136, 0.2);">
+                        <strong>Note:</strong> This is a demonstration website. No real appointments will be booked, and your information will not be saved.
+                    </div>
+
+                    <div style="margin-top: var(--space-8); text-align: right;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1.25rem;">Confirm Appointment Booking</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card text-center" style="padding: var(--space-12) var(--space-8); display: none; border: none; box-shadow: var(--shadow-lg);" id="booking-success">
+                <div style="color: var(--clr-success); margin-bottom: var(--space-6); display: flex; justify-content: center;">
+                    <div style="background: rgba(56, 161, 105, 0.1); width: 96px; height: 96px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                </div>
+                <h2 style="margin-bottom: var(--space-4);">Appointment Confirmed!</h2>
+                <p style="margin: 0 auto; max-width: 500px;">Your demo appointment has been successfully scheduled. This is an illustrative confirmation screen. We look forward to seeing you.</p>
+                <div style="margin-top: var(--space-8);">
+                    <a href="../index.html" class="btn btn-primary">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aurevia Hospital Demo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/appointments.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Aurevia Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar"></aside>
+        <main class="main-wrapper">
+            <header class="top-header" id="topHeader"></header>
+            <div class="main-content">
+                <div class="section-header">
+                    <h2>Reports & Analytics</h2>
+                    <button class="btn btn-outline" onclick="alert('Exporting CSV demo report...')"><i data-lucide="download"></i> Export Report</button>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3 style="margin-top:0; margin-bottom: 20px;">Appointments Over Time</h3>
+                        <canvas id="lineChart" width="400" height="200"></canvas>
+                    </div>
+                    <div class="card">
+                        <h3 style="margin-top:0; margin-bottom: 20px;">Appointments by Specialty</h3>
+                        <canvas id="barChart" width="100" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/layout.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctxLine = document.getElementById('lineChart').getContext('2d');
+            new Chart(ctxLine, {
+                type: 'line',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Appointments',
+                        data: [42, 38, 55, 48, 60, 25, 12],
+                        borderColor: '#138C88',
+                        tension: 0.4
+                    }]
+                }
+            });
+
+            const ctxBar = document.getElementById('barChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['Cardio', 'Neuro', 'Ortho', 'Peds'],
+                    datasets: [{
+                        label: 'Volume',
+                        data: [15, 22, 10, 8],
+                        backgroundColor: ['#123047', '#138C88', '#E9F6F3', '#687985']
+                    }]
+                }
+            });
+        });
+    </script>
+</body>
+</html>

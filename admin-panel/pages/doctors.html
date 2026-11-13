@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors - Aurevia Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar"></aside>
+        <main class="main-wrapper">
+            <header class="top-header" id="topHeader"></header>
+            <div class="main-content">
+                <div class="section-header">
+                    <h2>Doctors Management</h2>
+                    <button class="btn btn-primary" onclick="alert('Add Doctor modal would open here')"><i data-lucide="plus"></i> Add Doctor</button>
+                </div>
+                
+                <div class="filters-bar" style="background-color: var(--white); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
+                    <input type="text" class="form-control" placeholder="Search Doctors..." style="max-width: 250px;">
+                    <select class="form-control" style="max-width: 200px;">
+                        <option value="">All Specialties</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Neurology">Neurology</option>
+                    </select>
+                    <select class="form-control" style="max-width: 200px;">
+                        <option value="">All Branches</option>
+                        <option value="Main City">Main City</option>
+                        <option value="Westside">Westside</option>
+                    </select>
+                    <button class="btn btn-outline">Filter</button>
+                </div>
+
+                <div id="doctors-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px;">
+                    <!-- Doctors injected here by JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/doctors.js"></script>
+</body>
+</html>

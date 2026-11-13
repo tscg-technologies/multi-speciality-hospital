@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors | Aurevia Multispecialty Hospital</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body class="bg-ivory">
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                Aurevia
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="specialties.html">Specialties</a>
+                <a href="doctors.html" class="active">Doctors</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="patient-resources.html">Patients</a>
+                <a href="contact.html">Contact</a>
+                <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+            </nav>
+            <button class="mobile-menu-btn">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="bg-navy" style="padding: var(--space-12) 0;">
+        <div class="container text-center">
+            <h1 style="color: var(--clr-white);">Our Medical Experts</h1>
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.125rem;">Meet our team of highly qualified and experienced specialists dedicated to providing the best possible care. (Demo Profiles)</p>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div style="background: var(--clr-white); padding: var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-bottom: var(--space-10); display: flex; gap: var(--space-5); flex-wrap: wrap; border: 1px solid var(--clr-border);">
+                <div style="flex: 1; min-width: 250px;">
+                    <label class="form-label" style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Search Doctors</label>
+                    <input type="text" id="doctor-search" class="form-control" placeholder="Search by name...">
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <label class="form-label" style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-1);">Filter by Specialty</label>
+                    <select id="specialty-filter" class="form-control">
+                        <option value="">All Specialties</option>
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="doctors-grid" id="doctors-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-8);">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer snippet -->
+    <footer style="margin-top: auto;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aurevia Hospital Demo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/doctors.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Details | Aurevia Multispecialty Hospital</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body class="bg-ivory">
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                Aurevia
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="specialties.html">Specialties</a>
+                <a href="doctors.html">Doctors</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="patient-resources.html">Patients</a>
+                <a href="contact.html">Contact</a>
+                <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+            </nav>
+            <button class="mobile-menu-btn">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="breadcrumb container" style="margin-top: var(--space-8); margin-bottom: 0;">
+        <a href="../index.html">Home</a> <span class="breadcrumb-separator">/</span>
+        <a href="locations.html">Locations</a> <span class="breadcrumb-separator">/</span>
+        <span id="breadcrumb-name" style="color: var(--clr-navy); font-weight: 600;">Branch</span>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-12);">
+                <div>
+                    <h1 id="loc-name" style="margin-bottom: var(--space-4);">Branch Name</h1>
+                    <div style="display: flex; gap: var(--space-3); align-items: flex-start; margin-bottom: var(--space-8);">
+                        <svg style="color: var(--clr-teal); flex-shrink: 0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span id="loc-address" style="font-size: 1.25rem; font-weight: 500; color: var(--clr-navy);">Address</span>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1453&auto=format&fit=crop" alt="Hospital Building" style="width: 100%; aspect-ratio: 21/9; object-fit: cover; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); margin-bottom: var(--space-10);">
+
+                    <h3 style="margin-bottom: var(--space-4);">About this Branch</h3>
+                    <p style="font-size: 1.125rem;">This state-of-the-art facility provides comprehensive medical care to the local community. It is equipped with modern diagnostic and therapeutic technology to handle both routine and complex medical cases. (Demo description)</p>
+
+                    <h3 style="margin-top: var(--space-10); margin-bottom: var(--space-4);">Available Specialties (Demo)</h3>
+                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); list-style: none; font-size: 1.125rem;">
+                        <li style="display: flex; align-items: center; gap: var(--space-2);"><span style="color: var(--clr-teal);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Cardiology</li>
+                        <li style="display: flex; align-items: center; gap: var(--space-2);"><span style="color: var(--clr-teal);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Neurology</li>
+                        <li style="display: flex; align-items: center; gap: var(--space-2);"><span style="color: var(--clr-teal);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Orthopaedics</li>
+                        <li style="display: flex; align-items: center; gap: var(--space-2);"><span style="color: var(--clr-teal);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span> General Medicine</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <div class="card" style="padding: var(--space-8); border: none; box-shadow: var(--shadow-lg);">
+                        <h3 style="margin-bottom: var(--space-6); border-bottom: 2px solid var(--clr-mint); padding-bottom: var(--space-2);">Contact Info</h3>
+                        
+                        <div style="margin-bottom: var(--space-6);">
+                            <div style="font-size: 0.875rem; color: var(--clr-text-secondary); margin-bottom: var(--space-1); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Phone</div>
+                            <div id="loc-phone" style="font-weight: 600; font-size: 1.25rem; color: var(--clr-navy);">+1 (555) 000-0000</div>
+                        </div>
+
+                        <div style="margin-bottom: var(--space-8);">
+                            <div style="font-size: 0.875rem; color: var(--clr-text-secondary); margin-bottom: var(--space-2); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Operating Hours</div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--clr-border); padding-bottom: var(--space-2); margin-bottom: var(--space-2);">
+                                <span>Emergency</span>
+                                <span style="font-weight: 600; color: var(--clr-teal);">24/7</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>OPD</span>
+                                <span style="font-weight: 600; color: var(--clr-navy);">Mon-Sat, 9AM-5PM</span>
+                            </div>
+                        </div>
+
+                        <a href="appointments.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-3);">Book Appointment</a>
+                        <button class="btn btn-outline" style="width: 100%;" onclick="alert('Map routing demo');">Get Directions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: auto;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aurevia Hospital Demo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const locId = urlParams.get('id');
+            
+            if (locId && window.hospitalData) {
+                const loc = window.hospitalData.locations.find(l => l.id === locId);
+                if (loc) {
+                    document.getElementById('breadcrumb-name').textContent = loc.name;
+                    document.getElementById('loc-name').textContent = loc.name;
+                    document.getElementById('loc-address').textContent = loc.address;
+                    document.getElementById('loc-phone').textContent = loc.phone;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

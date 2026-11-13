@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Resources | Aurevia Multispecialty Hospital</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        .faq-item {
+            border: 1px solid var(--clr-border);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-4);
+            overflow: hidden;
+            background: var(--clr-white);
+            box-shadow: var(--shadow-sm);
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: var(--clr-white);
+            border: none;
+            padding: var(--space-6);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--clr-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question:focus {
+            outline: 2px solid var(--clr-teal);
+            outline-offset: -2px;
+        }
+        .faq-answer {
+            padding: 0 var(--space-6);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-normal), padding var(--transition-normal);
+            background: var(--clr-white);
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 var(--space-6) var(--space-6);
+            max-height: 500px;
+        }
+        .faq-icon {
+            transition: transform var(--transition-fast);
+            color: var(--clr-teal);
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-ivory">
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                Aurevia
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="specialties.html">Specialties</a>
+                <a href="doctors.html">Doctors</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="patient-resources.html" class="active">Patients</a>
+                <a href="contact.html">Contact</a>
+                <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+            </nav>
+            <button class="mobile-menu-btn">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="bg-navy" style="padding: var(--space-12) 0;">
+        <div class="container text-center">
+            <h1 style="color: var(--clr-white);">Patient Resources</h1>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.125rem; max-width: 600px; margin: 0 auto;">Everything you need to know before, during, and after your visit.</p>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 2.5fr; gap: var(--space-12); align-items: start;">
+                <!-- Sidebar -->
+                <div style="position: sticky; top: 110px;">
+                    <div class="card" style="padding: var(--space-6); border: none; box-shadow: var(--shadow-sm);">
+                        <h3 style="margin-bottom: var(--space-4); font-size: 1.25rem;">Quick Links</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3);">
+                            <li><a href="#first-visit" style="font-weight: 500; color: var(--clr-navy);">First Visit Guide</a></li>
+                            <li><a href="#insurance" style="font-weight: 500; color: var(--clr-navy);">Insurance & Billing</a></li>
+                            <li><a href="#packages" style="font-weight: 500; color: var(--clr-navy);">Health Packages</a></li>
+                            <li><a href="#faq" style="font-weight: 500; color: var(--clr-navy);">Frequently Asked Questions</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div>
+                    <div id="first-visit" style="margin-bottom: var(--space-12);">
+                        <h2 style="margin-bottom: var(--space-4);">Preparing for Your First Visit</h2>
+                        <p style="font-size: 1.125rem;">To ensure a smooth registration process, please bring the following items to your first appointment:</p>
+                        <ul style="list-style: none; margin-bottom: var(--space-6); display: flex; flex-direction: column; gap: var(--space-2); font-size: 1.125rem;">
+                            <li style="display: flex; align-items: center; gap: var(--space-3);"><span style="color: var(--clr-teal);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Government-issued photo ID</li>
+                            <li style="display: flex; align-items: center; gap: var(--space-3);"><span style="color: var(--clr-teal);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Health insurance card (if applicable)</li>
+                            <li style="display: flex; align-items: center; gap: var(--space-3);"><span style="color: var(--clr-teal);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span> List of current medications</li>
+                            <li style="display: flex; align-items: center; gap: var(--space-3);"><span style="color: var(--clr-teal);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Previous medical records and test results</li>
+                        </ul>
+                        <div style="background: var(--clr-mint); padding: var(--space-4); border-radius: var(--radius-md); border-left: 4px solid var(--clr-teal);">
+                            <p style="margin: 0; color: var(--clr-teal-hover); font-weight: 500;">Please arrive 15 minutes before your scheduled appointment time to complete any necessary paperwork.</p>
+                        </div>
+                    </div>
+
+                    <div id="insurance" style="margin-bottom: var(--space-12);">
+                        <h2 style="margin-bottom: var(--space-4);">Insurance and Billing (Demo)</h2>
+                        <p style="font-size: 1.125rem;">We accept a wide range of insurance plans. Please note that this is illustrative information. Contact our billing department for specific inquiries regarding coverage.</p>
+                        <div class="card" style="padding: var(--space-6); background-color: var(--clr-white); border: none; box-shadow: var(--shadow-sm); margin-top: var(--space-6);">
+                            <h4 style="margin-bottom: var(--space-4); color: var(--clr-navy);">Accepted Providers Include:</h4>
+                            <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); font-size: 1rem; font-weight: 500;">
+                                <li style="display: flex; gap: var(--space-2); align-items: center;"><div style="width: 8px; height: 8px; background: var(--clr-teal); border-radius: 50%;"></div> Demo Health Insurance Co.</li>
+                                <li style="display: flex; gap: var(--space-2); align-items: center;"><div style="width: 8px; height: 8px; background: var(--clr-teal); border-radius: 50%;"></div> National Health Network</li>
+                                <li style="display: flex; gap: var(--space-2); align-items: center;"><div style="width: 8px; height: 8px; background: var(--clr-teal); border-radius: 50%;"></div> SecureCare Providers</li>
+                                <li style="display: flex; gap: var(--space-2); align-items: center;"><div style="width: 8px; height: 8px; background: var(--clr-teal); border-radius: 50%;"></div> Global Health Alliance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="packages" style="margin-bottom: var(--space-12);">
+                        <h2 style="margin-bottom: var(--space-4);">Preventive Health Packages</h2>
+                        <p style="margin-bottom: var(--space-8); font-size: 1.125rem;">Regular screenings are vital for maintaining good health. We offer comprehensive checkup packages.</p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);">
+                            <div class="card" style="padding: var(--space-6); border: none; box-shadow: var(--shadow-md);">
+                                <h3 style="color: var(--clr-navy); margin-bottom: var(--space-2);">Basic Health Check</h3>
+                                <p style="font-size: 0.9375rem; min-height: 48px;">Essential screening for adults of all ages.</p>
+                                <ul style="font-size: 0.9375rem; list-style: none; margin-bottom: var(--space-6); display: flex; flex-direction: column; gap: var(--space-2);">
+                                    <li style="display: flex; gap: var(--space-2);"><span style="color: var(--clr-teal);">✓</span> Complete Blood Count</li>
+                                    <li style="display: flex; gap: var(--space-2);"><span style="color: var(--clr-teal);">✓</span> Blood Sugar Fasting</li>
+                                    <li style="display: flex; gap: var(--space-2);"><span style="color: var(--clr-teal);">✓</span> Lipid Profile</li>
+                                    <li style="display: flex; gap: var(--space-2);"><span style="color: var(--clr-teal);">✓</span> ECG</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-outline" style="width: 100%;">Inquire</a>
+                            </div>
+                            <div class="card" style="padding: var(--space-6); border: 2px solid var(--clr-teal); box-shadow: var(--shadow-lg); position: relative;">
+                                <div style="position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--clr-teal); color: var(--clr-white); padding: 0.25rem 1rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Recommended</div>
+                                <h3 style="color: var(--clr-navy); margin-bottom: var(--space-2); margin-top: var(--space-2);">Comprehensive Check</h3>
+                                <p style="font-size: 0.9375rem; min-height: 48px;">Detailed analysis for proactive health management.</p>
+                                <ul style="font-size: 0.9375rem; list-style: none; margin-bottom: var(--space-6); display: flex; flex-direction: column; gap: var(--space-2);">
+                                    <li style="display: flex; gap: var(--space-2);"><span style="color: var(--clr-teal);">✓</span> All Basic Tests</li>
+                                    <li style="display: flex; gap: var(--space-2);"><span style="color: var(--clr-teal);">✓</span> Liver Function Test</li>
+                                    <li style="display: flex; gap: var(--space-2);"><span style="color: var(--clr-teal);">✓</span> Kidney Function Test</li>
+                                    <li style="display: flex; gap: var(--space-2);"><span style="color: var(--clr-teal);">✓</span> Ultrasound Abdomen</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-primary" style="width: 100%;">Inquire</a>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: var(--clr-text-secondary); margin-top: var(--space-4);">* Packages and inclusions are illustrative for demo purposes.</p>
+                    </div>
+
+                    <div id="faq">
+                        <h2 style="margin-bottom: var(--space-6);">Frequently Asked Questions</h2>
+                        
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    How do I book an appointment?
+                                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p style="margin-top: var(--space-2); font-size: 1.125rem;">You can book an appointment using our online demo form, or by calling our demo helpline. Please navigate to the "Book Appointment" page to proceed.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    What are the visiting hours?
+                                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p style="margin-top: var(--space-2); font-size: 1.125rem;">Standard visiting hours for wards are from 4:00 PM to 7:00 PM. ICU visiting hours are strictly between 11:00 AM - 12:00 PM and 5:00 PM - 6:00 PM. (Illustrative data)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    Do you offer telemedicine consultations?
+                                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p style="margin-top: var(--space-2); font-size: 1.125rem;">Yes, many of our specialists offer video consultations. You can select the telemedicine option when booking your appointment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: auto;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aurevia Hospital Demo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
